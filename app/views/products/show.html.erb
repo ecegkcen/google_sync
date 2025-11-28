@@ -1,0 +1,10 @@
+<h1><%= @product.name %> Detayları</h1>
+
+<p>
+  <strong>Fiyat:</strong> <%= @product.price %><br>
+  <strong>Stok:</strong> <%= @product.stock %><br>
+  <strong>Kategori:</strong> <%= @product.category %>
+</p>
+
+<%= link_to "Düzenle", edit_product_path(@product) %> |
+<%= link_to "Geri", products_path %>

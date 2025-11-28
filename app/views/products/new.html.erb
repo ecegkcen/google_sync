@@ -1,0 +1,29 @@
+<h1><%= action_name.capitalize %> Ürün</h1>
+
+<%= form_with model: @product do |f| %>
+  <p>
+    <%= f.label :name, "Ad" %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :price, "Fiyat" %><br>
+    <%= f.number_field :price, step: 0.01 %>
+  </p>
+
+  <p>
+    <%= f.label :stock, "Stok" %><br>
+    <%= f.number_field :stock %>
+  </p>
+
+  <p>
+    <%= f.label :category, "Kategori" %><br>
+    <%= f.text_field :category %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<%= link_to "Geri", products_path %>

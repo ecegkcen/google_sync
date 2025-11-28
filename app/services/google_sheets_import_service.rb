@@ -11,7 +11,7 @@ class GoogleSheetsImportService
     service.client_options.application_name = "GoogleSyncApp"
     service.authorization = Google::Auth::ServiceAccountCredentials.make_creds(
       json_key_io: File.open("./config/celtic-acumen-479620-i6-6e8bf9a13bfa.json"),
-      scope: ["https://www.googleapis.com/auth/spreadsheets"]
+      scope: [ "https://www.googleapis.com/auth/spreadsheets" ]
     )
 
     response = service.get_spreadsheet_values(SPREADSHEET_ID, RANGE)
